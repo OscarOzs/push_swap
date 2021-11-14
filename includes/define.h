@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/14 17:35:53 by user42           ###   ########.fr       */
+/*   Created: 2021/11/14 17:31:46 by user42            #+#    #+#             */
+/*   Updated: 2021/11/14 17:32:42 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef DEFINE_H
+# define DEFINE_H
 
-// lib
-# include "libft.h"
-
-// define
-# include "define.h"
-
-// checker
-# include "arg_check.h"
+# define ERROR -1
 
 #endif

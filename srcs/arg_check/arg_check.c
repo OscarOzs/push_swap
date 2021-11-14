@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   arg_check.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/14 17:35:53 by user42           ###   ########.fr       */
+/*   Created: 2021/11/14 17:29:56 by user42            #+#    #+#             */
+/*   Updated: 2021/11/14 18:09:37 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-// lib
-# include "libft.h"
-
-// define
-# include "define.h"
-
-// checker
-# include "arg_check.h"
-
-#endif
+t_bool  arg_check(int ac, char **av)
+{
+	if (number_of_arg(ac) == ERROR)
+		return (ERROR);
+	if (int_overflow_and_is_digit(ac, av) == ERROR)
+		return (ERROR);
+}

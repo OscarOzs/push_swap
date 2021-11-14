@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   arg_check.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/14 17:35:53 by user42           ###   ########.fr       */
+/*   Created: 2021/11/14 17:36:14 by user42            #+#    #+#             */
+/*   Updated: 2021/11/14 17:39:50 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef ARG_CHECK_H
+# define ARG_CHECK_H
 
-// lib
-# include "libft.h"
+t_bool  arg_check(int ac, char **av);
+t_bool	number_of_arg(int ac);
 
-// define
-# include "define.h"
-
-// checker
-# include "arg_check.h"
 
 #endif

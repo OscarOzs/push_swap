@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 19:30:21 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/07 16:40:15 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:18:39 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef int	t_bool;
 
 int		ft_atoi_base(char *str, char *base);
 int		ft_atoi(const char *str);
+int		ft_atol(const char *str);
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 char	*ft_convert_fullbinary(char *nbr, char *decimal, char *binary);
 t_bool	ft_isalnum(int c);
