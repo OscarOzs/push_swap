@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/14 20:06:43 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/15 12:46:56 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,4 @@ int main(int ac, char **av)
 {
 	if (arg_check(ac, av) == ERROR)
 		return (ERROR);
-	printf("np\n");
 }

@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:17:42 by user42            #+#    #+#             */
-/*   Updated: 2021/11/14 18:18:30 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/15 12:44:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	long	res;
 	int		sign;
