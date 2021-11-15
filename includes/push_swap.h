@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/14 19:51:52 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/15 15:38:33 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@
 
 // checker
 # include "arg_check.h"
+
+// node structure
+# include "node_number_data.h"
 
 #endif
