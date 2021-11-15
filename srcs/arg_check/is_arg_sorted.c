@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg_check.h                                        :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 17:36:14 by user42            #+#    #+#             */
-/*   Updated: 2021/11/15 14:25:51 by user42           ###   ########.fr       */
+/*   Created: 2021/11/15 14:17:32 by user42            #+#    #+#             */
+/*   Updated: 2021/11/15 14:25:45 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARG_CHECK_H
-# define ARG_CHECK_H
+#include "push_swap.h"
 
-t_bool  arg_check(int ac, char **av);
-t_bool	number_of_arg(int ac);
-t_bool	int_overflow_and_is_number(int len, char **args);
-t_bool	is_duplicate(int len, char **args);
-t_bool	is_arg_sorted(int len, char **arg);
+t_bool	is_arg_sorted(int len, char **arg)
+{
+	int	i;
+	int	j;
 
-#endif
+	i = 1;
+	while (i < len)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (ft_atol(arg[i]) > ft_atol(arg[j]))
+				return (FALSE);
+			j++;
+		}
+		i++;
+	}
+	return (TRUE);
+}
