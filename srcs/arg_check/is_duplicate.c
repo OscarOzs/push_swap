@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_duplicate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/15 13:11:36 by user42           ###   ########.fr       */
+/*   Created: 2021/11/15 12:55:33 by user42            #+#    #+#             */
+/*   Updated: 2021/11/15 13:02:09 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-int main(int ac, char **av)
+t_bool	is_duplicate(int len, char **args)
 {
-	if (arg_check(ac, av) == ERROR)
-		return (ERROR);
-	printf("np\n");
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < len)
+	{
+		j = 1;
+		while (j < len)
+		{
+			if (ft_atol(args[i]) == ft_atol(args[j]))
+				return (TRUE);
+			j++;
+		}
+		i++;
+	}
+	return (FALSE);
 }
