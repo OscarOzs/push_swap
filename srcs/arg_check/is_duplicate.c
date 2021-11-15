@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:55:33 by user42            #+#    #+#             */
-/*   Updated: 2021/11/15 13:02:09 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/15 13:22:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_bool	is_duplicate(int len, char **args)
 	i = 1;
 	while (i < len)
 	{
-		j = 1;
+		j = i + 1;
 		while (j < len)
 		{
 			if (ft_atol(args[i]) == ft_atol(args[j]))

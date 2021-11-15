@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 17:43:29 by user42            #+#    #+#             */
-/*   Updated: 2021/11/15 13:17:26 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/15 13:19:09 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,7 @@ t_bool	int_overflow_and_is_number(int len, char **args)
 		if (is_number(args[i]) == FALSE)
 			return (ERROR);
 		if (is_int_overflow(args[i]) == TRUE)
-		{
 			return (ERROR);
-		}
 		i++;
 	}
 	return (SUCCESS);
