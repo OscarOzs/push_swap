@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   set_nodes.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/15 16:29:09 by user42           ###   ########.fr       */
+/*   Created: 2021/11/15 16:27:23 by user42            #+#    #+#             */
+/*   Updated: 2021/11/15 16:27:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#ifndef SET_NODES_H
+# define SET_NODES_H
 
-int main(int ac, char **av)
-{
-	nbr_data	*number;
+nbr_data	*set_nodes(int size, char **arg, nbr_data *node);
+nbr_data	*malloc_nodes(int size, nbr_data *node);
 
-	number = NULL;
-	if (arg_check(ac, av) == ERROR)
-	{
-		write(1, "Error\n", 8);
-		return (ERROR);
-	}
-	if (is_arg_sorted(ac, av) == TRUE)
-		return (SUCCESS);
-	number = set_nodes(ac - 1, av, number);
-	if (number == NULL)
-		return (ERROR);
-}
+
+#endif
