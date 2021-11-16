@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 15:14:12 by oozsertt          #+#    #+#              #
-#    Updated: 2021/11/15 16:28:36 by user42           ###   ########.fr        #
+#    Updated: 2021/11/16 17:29:22 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.c=%.o))
 
 LIB = ft
 
-CFLAGS =	-Wall -Werror -Wextra
+CFLAGS =	
+# -Wall -Werror -Wextra
 BFLAGS =	-DBONUS=1
 NOBFLAGS =	-DBONUS=0
 
