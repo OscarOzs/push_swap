@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 19:30:21 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/15 12:44:39 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/19 16:35:40 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ t_bool	ft_isdigit(int c);
 t_bool	ft_isprint(int c);
 char	*ft_itoa(int n);
 void	*ft_memset(void *b, int c, size_t len);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
