@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:25:33 by user42            #+#    #+#             */
-/*   Updated: 2021/11/19 15:26:01 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/19 16:19:47 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	sort_small_stack(nbr_data *number)
 {
-	
+	if (lst_size(number) == 3)
+		sort_three_numbers(number);
 }
