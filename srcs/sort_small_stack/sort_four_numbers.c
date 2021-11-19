@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_small_stack.c                                 :+:      :+:    :+:   */
+/*   sort_four_numbers.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 15:25:33 by user42            #+#    #+#             */
-/*   Updated: 2021/11/19 17:05:23 by user42           ###   ########.fr       */
+/*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
+/*   Updated: 2021/11/19 17:06:06 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_small_stack(nbr_data *number)
+void	sort_four_numbers(nbr_data *number)
 {
-	if (lst_size(number) == 3)
-		sort_three_numbers(number);
-	else if (lst_size(number) == 4)
-		sort_four_numbers(number);
+	
 }
