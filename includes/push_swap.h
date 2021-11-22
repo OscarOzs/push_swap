@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/22 15:37:40 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/22 15:39:34 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@
 // node structure
 # include "node_number_data.h"
 
-// malloc
-# include "malloc.h"
-
 // utils
 # include "utils.h"
+
+// malloc
+# include "malloc.h"
 
 // set node
 # include "set_nodes.h"
