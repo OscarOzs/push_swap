@@ -6,13 +6,14 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:32:30 by user42            #+#    #+#             */
-/*   Updated: 2021/11/22 15:32:57 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/22 17:36:55 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	four_numbers_pb_zero(nbr_data *number)
+void	four_numbers_pb_zero(nbr_data *number, nbr_data *stack_b)
 {
-	
+	if (number[0].nbr_pos == 0)
+		
 }
