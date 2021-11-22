@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:20:23 by user42            #+#    #+#             */
-/*   Updated: 2021/11/19 16:49:06 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/22 15:10:22 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	middle_is_top(nbr_data *number)
 		ft_putstr("rra\n");
 }
 
-static void	first_is_top(nbr_data *number)
+static void	first_is_top()
 {
 	ft_putstr("pb\n");
 	ft_putstr("sa\n");
@@ -45,5 +45,5 @@ void	sort_three_numbers(nbr_data *number)
 	else if (number[0].nbr_pos == 1)
 		middle_is_top(number);
 	else if (number[0].nbr_pos == 0)
-		first_is_top(number);
+		first_is_top();
 }
