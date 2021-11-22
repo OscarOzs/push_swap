@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_four_numbers.c                                :+:      :+:    :+:   */
+/*   four_numbers_pb_zero.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/22 15:53:21 by user42           ###   ########.fr       */
+/*   Created: 2021/11/22 15:32:30 by user42            #+#    #+#             */
+/*   Updated: 2021/11/22 15:32:57 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	last_is_top()
+void	four_numbers_pb_zero(nbr_data *number)
 {
-	
-}
-
-void	sort_four_numbers(nbr_data *number)
-{
-	nbr_data *stack_b;
-
-	stack_b = NULL;
-	stack_b = malloc_stack_b(number, stack_b);
-	if (stack_b == NULL)
-	{
-		free_number_and_stack_b(number, stack_b);
-		exit(EXIT_FAILURE);
-	}
 	
 }
