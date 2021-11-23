@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/22 20:23:14 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/23 20:17:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,20 @@ void	sort_four_numbers(nbr_data *number)
 		exit(EXIT_FAILURE);
 	}
 	stack_b->next = NULL;
-
 	nbr_data *tmp;
-
 	tmp = number;
-	while (number->next != NULL)
+	while (tmp != NULL)
 	{
-		PRINTD(number->nbr_pos)
-		number = number->next;
+		PRINTD(tmp->nbr)
+		tmp = tmp->next;
 	}
-	number = tmp;
 	number = four_numbers_pb_zero(number, stack_b);
-	printf("\n\n");
-	while (number->next != NULL)
+	tmp = number;
+	while (tmp != NULL)
 	{
-		PRINTD(number->nbr_pos)
-		number = number->next;
+		PRINTD(tmp->nbr)
+		tmp = tmp->next;
 	}
+	printf("\n");
+	PRINTD(stack_b->nbr)
 }

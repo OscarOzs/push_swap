@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:39:17 by user42            #+#    #+#             */
-/*   Updated: 2021/11/16 17:43:49 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/23 18:58:00 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 size_t	lst_size(nbr_data *lst)
 {
-	int		i;
 	size_t	size;
 
-	i = 0;
 	size = 0;
-	while (lst[i].next != NULL)
+	while (lst != NULL)
 	{
-		i++;
+		lst = lst->next;
 		size++;
 	}
 	return (size);
