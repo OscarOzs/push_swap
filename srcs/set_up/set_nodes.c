@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:44:27 by user42            #+#    #+#             */
-/*   Updated: 2021/11/22 17:34:23 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/23 18:54:14 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void	link_nodes(int size, nbr_data *node)
 		node[i].next = &node[i + 1];
 		i++;
 	}
-	node[i].next = NULL;
+	node[i - 1].next = NULL;
 }
 
 static void	unsort_nodes(int size, char **arg, nbr_data *node)
