@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_four_numbers.c                                :+:      :+:    :+:   */
+/*   is_lst_sorted.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 13:09:48 by user42           ###   ########.fr       */
+/*   Created: 2021/11/24 13:01:31 by user42            #+#    #+#             */
+/*   Updated: 2021/11/24 13:05:01 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_four_numbers(nbr_data *number)
+t_bool  is_lst_sorted(nbr_data *lst)
 {
-	nbr_data *stack_b;
+	nbr_data    *tmp;
 
-	stack_b = NULL;
-	stack_b = malloc(sizeof(nbr_data) * 1);
-	if (stack_b == NULL)
+	tmp = lst;
+	while (lst->next != NULL)
 	{
-		free_number_and_stack_b(number, stack_b);
-		exit(EXIT_FAILURE);
+		if (lst->nbr > lst->next->nbr)
+			return (FALSE);
+		lst = lst->next;
 	}
-	stack_b->next = NULL;
-	number = four_numbers_pb_zero(number, stack_b);
-
+	return (TRUE);
 }
