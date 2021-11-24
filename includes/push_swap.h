@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 18:21:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/22 15:39:34 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/24 14:22:28 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@
 
 // node structure
 # include "node_number_data.h"
+
+// operations
+# include "operations.h"
 
 // utils
 # include "utils.h"
