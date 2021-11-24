@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:32:30 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 13:18:48 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/24 15:37:24 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,34 @@
 
 static nbr_data	*zero_is_first(nbr_data *number, nbr_data *stack_b)
 {
-	write(1, "pb\n", 3);
-	stack_b->nbr = number->nbr;
-	stack_b->nbr_pos = number->nbr_pos;
-	number = number->next;
+	number = pb(number, stack_b);
 	return (number);
 }
 
 static nbr_data	*zero_is_second(nbr_data *number, nbr_data *stack_b)
 {
-	nbr_data	*last_node;
-	nbr_data	*tmp;
-
-	write(1, "ra\n", 3);
-	last_node = number;
-	tmp = number;
-	while (last_node->next != NULL)
-		last_node = last_node->next;
-	number = number->next;
-	last_node->next = tmp;
-	tmp->next = NULL;
+	number = ra(number);
 	if (is_lst_sorted(number) == TRUE)
 		return (number);
-	write(1, "pb\n", 3);
-	stack_b->nbr = number->nbr;
-	stack_b->nbr_pos = number->nbr_pos;
-	number = number->next;
+	number = pb(number, stack_b);
 	return (number);
 }
 
 nbr_data	*zero_is_third(nbr_data *number, nbr_data *stack_b)
 {
-	write(1, "ra\n", 3);
-	write(1, "ra\n", 3);
-	
+	number = ra(number);
+	number = ra(number);
+	if (is_lst_sorted(number) == TRUE)
+		return (number);
+	number = pb(number, stack_b);
+	return (number);
+}
+
+nbr_data	*zero_is_last(nbr_data *number, nbr_data *stack_b)
+{
+	number = rra(number);
+	number = pb(number, stack_b);
+	return (number);
 }
 
 nbr_data	*four_numbers_pb_zero(nbr_data *number, nbr_data *stack_b)
@@ -65,6 +59,8 @@ nbr_data	*four_numbers_pb_zero(nbr_data *number, nbr_data *stack_b)
 			number = zero_is_second(number, stack_b);
 		else if (tmp->nbr_pos == 0 && i == 2)
 			number = zero_is_third(number, stack_b);
+		else if (tmp->nbr_pos == 0 && i == 3)
+			number = zero_is_last(number, stack_b);
 		i++;
 		tmp = tmp->next;
 	}
