@@ -6,13 +6,14 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:03:06 by user42            #+#    #+#             */
-/*   Updated: 2021/11/22 14:08:17 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/24 17:11:33 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_two_numbers(nbr_data *number)
+nbr_data	*sort_two_numbers(nbr_data *number)
 {
-	write(1, "sa\n", 3);
+	number = sa(number);
+	return (number);
 }

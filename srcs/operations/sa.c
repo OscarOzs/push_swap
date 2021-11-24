@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_small_stack.c                                 :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 15:25:33 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 17:27:06 by user42           ###   ########.fr       */
+/*   Created: 2021/11/24 16:34:57 by user42            #+#    #+#             */
+/*   Updated: 2021/11/24 16:41:36 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-nbr_data	*sort_small_stack(nbr_data *number)
+nbr_data	*sa(nbr_data *stack_a)
 {
-	if (lst_size(number) == 2)
-		number = sort_two_numbers(number);
-	else if (lst_size(number) == 3)
-		number = sort_three_numbers(number);
-	else if (lst_size(number) == 4)
-		number = sort_four_numbers(number);
+	nbr_data	*second_node;
+	nbr_data	*tmp;
+
+	if (lst_size(sa) < 2)
+		return (stack_a);
+	tmp = stack_a;
+	tmp->nbr = second_node->nbr;
+	tmp->nbr_pos = second_node->nbr_pos;
+	second_node->nbr = stack_a->nbr;
+	second_node->nbr_pos = stack_a->nbr_pos;
+	stack_a = tmp;
+	write (1, "sa\n", 3);
+	return (stack_a);
 }
