@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 14:46:39 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 14:55:36 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int main(int ac, char **av)
 {
-	nbr_data	*number;
+	nbr_data	*stack_a;
 
-	number = NULL;
+	stack_a = NULL;
 	if (arg_check(ac, av) == ERROR)
 	{
 		write(1, "Error\n", 8);
@@ -25,13 +25,13 @@ int main(int ac, char **av)
 	}
 	if (is_arg_sorted(ac, av) == TRUE)
 		return (SUCCESS);
-	number = set_nodes(ac - 1, av, number);
-	if (number == NULL)
+	stack_a = set_nodes(ac - 1, av, stack_a);
+	if (stack_a == NULL)
 	{
-		free(number);
+		free(stack_a);
 		return (ERROR);
 	}
-	if (lst_size(number) <= 5)
-		number = sort_small_stack(number);
+	if (lst_size(stack_a) <= 5)
+		stack_a = sort_small_stack(stack_a);
 	
 }

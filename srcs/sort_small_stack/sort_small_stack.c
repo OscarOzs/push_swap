@@ -6,21 +6,21 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:25:33 by user42            #+#    #+#             */
-/*   Updated: 2021/11/26 14:46:29 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 15:25:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-nbr_data	*sort_small_stack(nbr_data *number)
+nbr_data	*sort_small_stack(nbr_data *stack_a)
 {
-	if (lst_size(number) == 2)
-		number = sort_two_numbers(number);
-	else if (lst_size(number) == 3)
-		number = sort_three_numbers(number);
-	else if (lst_size(number) == 4)
-		number = sort_four_numbers(number);
-	// else if (lst_size(number) == 5)
-	// 	number = sort_five_numbers(number);
-	return (number);
+	if (lst_size(stack_a) == 2)
+		stack_a = sort_two_numbers(stack_a);
+	else if (lst_size(stack_a) == 3)
+		stack_a = sort_three_numbers(stack_a);
+	else if (lst_size(stack_a) == 4)
+		stack_a = sort_four_numbers(stack_a);
+	// else if (lst_size(stack_a) == 5)
+	// 	stack_a = sort_five_numbers(stack_a);
+	return (stack_a);
 }

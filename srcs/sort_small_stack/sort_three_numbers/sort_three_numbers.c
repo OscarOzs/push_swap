@@ -6,44 +6,44 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:20:23 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 20:59:29 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 14:59:21 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static nbr_data *last_is_top(nbr_data *number)
+static nbr_data *last_is_top(nbr_data *stack_a)
 {
-	if (number->next->nbr_pos == 1)
+	if (stack_a->next->nbr_pos == 1)
 	{
-		number = sa(number);
-		number = rra(number);
+		stack_a = sa(stack_a);
+		stack_a = rra(stack_a);
 	}
-	else if (number->next->nbr_pos == 0)
-		number = ra(number);
+	else if (stack_a->next->nbr_pos == 0)
+		stack_a = ra(stack_a);
 }
 
-static nbr_data	*middle_is_top(nbr_data *number)
+static nbr_data	*middle_is_top(nbr_data *stack_a)
 {
-	if (number->next->nbr_pos == 0)
-		number = sa(number);
-	else if (number->next->nbr_pos == 2)
-		number = rra(number);
+	if (stack_a->next->nbr_pos == 0)
+		stack_a = sa(stack_a);
+	else if (stack_a->next->nbr_pos == 2)
+		stack_a = rra(stack_a);
 }
 
-static nbr_data	*first_is_top(nbr_data *number)
+static nbr_data	*first_is_top(nbr_data *stack_a)
 {
-	number = rra(number);
-	number = sa(number);
+	stack_a = rra(stack_a);
+	stack_a = sa(stack_a);
 }
 
-nbr_data	*sort_three_numbers(nbr_data *number)
+nbr_data	*sort_three_numbers(nbr_data *stack_a)
 {
-	if (number->nbr_pos == 2)
-		number = last_is_top(number);
-	else if (number->nbr_pos == 1)
-		number  = middle_is_top(number);
-	else if (number->nbr_pos == 0)
-		number = first_is_top(number);
-	return (number);
+	if (stack_a->nbr_pos == 2)
+		stack_a = last_is_top(stack_a);
+	else if (stack_a->nbr_pos == 1)
+		stack_a  = middle_is_top(stack_a);
+	else if (stack_a->nbr_pos == 0)
+		stack_a = first_is_top(stack_a);
+	return (stack_a);
 }
