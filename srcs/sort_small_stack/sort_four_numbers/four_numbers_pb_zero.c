@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:32:30 by user42            #+#    #+#             */
-/*   Updated: 2021/11/26 13:23:13 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 14:40:35 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 static nbr_data	*zero_is_first(nbr_data *number, nbr_data **stack_b)
 {
+	*stack_b = (nbr_data *)malloc(sizeof(nbr_data) * 1);
+	if (stack_b == NULL)
+	{
+		free_number_and_stack_b(number, *stack_b);
+		exit(EXIT_FAILURE);
+	}
 	number = pb(number, stack_b);
 	return (number);
 }
@@ -23,6 +29,12 @@ static nbr_data	*zero_is_second(nbr_data *number, nbr_data **stack_b)
 	number = ra(number);
 	if (is_lst_sorted(number) == TRUE)
 		return (number);
+	*stack_b = (nbr_data *)malloc(sizeof(nbr_data) * 1);
+	if (stack_b == NULL)
+	{
+		free_number_and_stack_b(number, *stack_b);
+		exit(EXIT_FAILURE);
+	}
 	number = pb(number, stack_b);
 	return (number);
 }
@@ -33,6 +45,12 @@ nbr_data	*zero_is_third(nbr_data *number, nbr_data **stack_b)
 	number = ra(number);
 	if (is_lst_sorted(number) == TRUE)
 		return (number);
+	*stack_b = (nbr_data *)malloc(sizeof(nbr_data) * 1);
+	if (stack_b == NULL)
+	{
+		free_number_and_stack_b(number, *stack_b);
+		exit(EXIT_FAILURE);
+	}
 	number = pb(number, stack_b);
 	return (number);
 }
@@ -40,6 +58,14 @@ nbr_data	*zero_is_third(nbr_data *number, nbr_data **stack_b)
 nbr_data	*zero_is_last(nbr_data *number, nbr_data **stack_b)
 {
 	number = rra(number);
+	if (is_lst_sorted(number) == TRUE)
+		return (number);
+	*stack_b = (nbr_data *)malloc(sizeof(nbr_data) * 1);
+	if (stack_b == NULL)
+	{
+		free_number_and_stack_b(number, *stack_b);
+		exit(EXIT_FAILURE);
+	}
 	number = pb(number, stack_b);
 	return (number);
 }

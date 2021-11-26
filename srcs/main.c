@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 13:44:21 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 14:46:39 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int main(int ac, char **av)
 	}
 	if (lst_size(number) <= 5)
 		number = sort_small_stack(number);
-	free(number);
+	
 }
