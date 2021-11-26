@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/26 13:35:43 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 13:42:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ nbr_data	*sort_four_numbers(nbr_data *number)
 	}
 	number = sort_three_numbers_left(number);
 	number = pa(number, &stack_b);
+	free_number_and_stack_b(number, stack_b);
 	return (number);
 }
