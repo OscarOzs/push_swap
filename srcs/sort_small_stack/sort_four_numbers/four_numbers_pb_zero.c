@@ -6,19 +6,19 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:32:30 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 22:04:09 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 13:23:13 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static nbr_data	*zero_is_first(nbr_data *number, nbr_data *stack_b)
+static nbr_data	*zero_is_first(nbr_data *number, nbr_data **stack_b)
 {
 	number = pb(number, stack_b);
 	return (number);
 }
 
-static nbr_data	*zero_is_second(nbr_data *number, nbr_data *stack_b)
+static nbr_data	*zero_is_second(nbr_data *number, nbr_data **stack_b)
 {
 	number = ra(number);
 	if (is_lst_sorted(number) == TRUE)
@@ -27,7 +27,7 @@ static nbr_data	*zero_is_second(nbr_data *number, nbr_data *stack_b)
 	return (number);
 }
 
-nbr_data	*zero_is_third(nbr_data *number, nbr_data *stack_b)
+nbr_data	*zero_is_third(nbr_data *number, nbr_data **stack_b)
 {
 	number = ra(number);
 	number = ra(number);
@@ -37,14 +37,14 @@ nbr_data	*zero_is_third(nbr_data *number, nbr_data *stack_b)
 	return (number);
 }
 
-nbr_data	*zero_is_last(nbr_data *number, nbr_data *stack_b)
+nbr_data	*zero_is_last(nbr_data *number, nbr_data **stack_b)
 {
 	number = rra(number);
 	number = pb(number, stack_b);
 	return (number);
 }
 
-nbr_data	*four_numbers_pb_zero(nbr_data *number, nbr_data *stack_b)
+nbr_data	*four_numbers_pb_zero(nbr_data *number, nbr_data **stack_b)
 {
 	int			i;
 	nbr_data	*tmp;

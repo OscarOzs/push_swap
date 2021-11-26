@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 22:06:46 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 13:35:43 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static nbr_data	*first_is_top(nbr_data *number)
 	return (number);
 }
 
-static nbr_data	*sort_three_numbers_left(nbr_data *number, nbr_data *stack_b)
+static nbr_data	*sort_three_numbers_left(nbr_data *number)
 {
 	if (number->nbr_pos == 3)
 		number = last_is_top(number);
@@ -63,34 +63,13 @@ nbr_data	*sort_four_numbers(nbr_data *number)
 		exit(EXIT_FAILURE);
 	}
 	stack_b->next = NULL;
-	nbr_data *tmp;
-
-	tmp = number;
-	while (tmp != NULL)
+	number = four_numbers_pb_zero(number, &stack_b);
+	if (is_lst_sorted(number) == TRUE)
 	{
-		PRINTD(tmp->nbr)
-		tmp = tmp->next;
+		number = pa(number, &stack_b);
+		return (number);
 	}
-	printf("stack b : %d\n", stack_b->nbr);
-	PRINTC('\n')
-
-	number = pb(number, stack_b);
-
-	PRINTC('\n')
-	tmp = number;
-	while (tmp != NULL)
-	{
-		PRINTD(tmp->nbr)
-		tmp = tmp->next;
-	}
-	printf("stack b : %d\n", stack_b->nbr);
-	// number = four_numbers_pb_zero(number, stack_b);
-	// if (is_lst_sorted(number) == TRUE)
-	// {
-	// 	number = pa(number, stack_b);
-	// 	return (number);
-	// }
-	// number = sort_three_numbers_left(number, stack_b);
-	// number = pa(number, stack_b);
+	number = sort_three_numbers_left(number);
+	number = pa(number, &stack_b);
 	return (number);
 }
