@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:44:27 by user42            #+#    #+#             */
-/*   Updated: 2021/11/23 18:54:14 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/26 16:04:25 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,12 +94,12 @@ static void	unsort_nodes(int size, char **arg, nbr_data *node)
 
 nbr_data	*set_nodes(int size, char **arg, nbr_data *node)
 {
-	node = malloc_nodes(size, node);
-	if (node == NULL)
-		return (NULL);
-	give_nbr_to_nodes(size, arg, node);
-	sort_nodes_and_get_position(size, node);
-	unsort_nodes(size, arg, node);
-	link_nodes(size, node);
+	// node = malloc_nodes(size, node);
+	// if (node == NULL)
+	// 	return (NULL);
+	// give_nbr_to_nodes(size, arg, node);
+	// sort_nodes_and_get_position(size, node);
+	// unsort_nodes(size, arg, node);
+	// link_nodes(size, node);
 	return (node);
 }
