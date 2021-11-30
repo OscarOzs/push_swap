@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:05:39 by user42            #+#    #+#             */
-/*   Updated: 2021/11/26 15:26:19 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/30 16:25:39 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ nbr_data	*sort_four_numbers(nbr_data *stack_a)
 {
 	nbr_data *stack_b;
 
-	stack_b = NULL;
+	stack_b = malloc_stack(lst_size(stack_a), stack_b);
 	stack_a = four_numbers_pb_zero(stack_a, &stack_b);
 	if (is_lst_sorted(stack_a) == TRUE && stack_b == NULL)
 		return (stack_a);
 	stack_a = sort_three_numbers_left(stack_a);
 	stack_a = pa(stack_a, &stack_b);
-	free(stack_b);
+	free_stack(stack_b);
 	return (stack_a);
 }
