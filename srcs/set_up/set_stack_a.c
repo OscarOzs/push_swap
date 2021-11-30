@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:34:31 by user42            #+#    #+#             */
-/*   Updated: 2021/11/30 15:00:03 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/30 15:31:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static nbr_data	*sort_stack(nbr_data *stack)
 	int			i;
 
 	stack_addr = stack;
-	i = 1;
+	i = 0;
 	while (stack_addr != NULL)
 	{
 		tmp = stack_addr->next;
@@ -84,10 +84,10 @@ nbr_data	*set_stack_a(int size, char **arg, nbr_data *stack_a)
 {
 	nbr_data	*stack_a_cpy;
 
-	stack_a = malloc_stack_a(size, stack_a);
+	stack_a = malloc_stack(size, stack_a);
 	if (stack_a == NULL)
 		return (NULL);
-	stack_a_cpy = malloc_stack_a(size, stack_a_cpy);
+	stack_a_cpy = malloc_stack(size, stack_a_cpy);
 	if (stack_a_cpy == NULL)
 		return (NULL);
 	get_nbr(stack_a, arg);
