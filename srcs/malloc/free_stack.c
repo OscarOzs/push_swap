@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:52:01 by user42            #+#    #+#             */
-/*   Updated: 2021/11/29 23:39:01 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/30 15:00:58 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	free_stack(nbr_data *stack)
 {
-	while (stack != NULL)
+	while (stack->next != NULL)
 	{
 		free(stack);
 		stack = stack->next;
