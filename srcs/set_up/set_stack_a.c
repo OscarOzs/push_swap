@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:34:31 by user42            #+#    #+#             */
-/*   Updated: 2021/11/30 15:31:05 by user42           ###   ########.fr       */
+/*   Updated: 2021/12/01 15:18:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ nbr_data	*set_stack_a(int size, char **arg, nbr_data *stack_a)
 {
 	nbr_data	*stack_a_cpy;
 
+	stack_a_cpy = NULL;
 	stack_a = malloc_stack(size, stack_a);
 	if (stack_a == NULL)
 		return (NULL);

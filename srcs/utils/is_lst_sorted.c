@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:01:31 by user42            #+#    #+#             */
-/*   Updated: 2021/11/24 13:05:01 by user42           ###   ########.fr       */
+/*   Updated: 2021/12/01 15:18:13 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ t_bool  is_lst_sorted(nbr_data *lst)
 	nbr_data    *tmp;
 
 	tmp = lst;
-	while (lst->next != NULL)
+	while (tmp->next != NULL)
 	{
-		if (lst->nbr > lst->next->nbr)
+		if (tmp->nbr > tmp->next->nbr)
 			return (FALSE);
-		lst = lst->next;
+		tmp = tmp->next;
 	}
 	return (TRUE);
 }
