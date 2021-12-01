@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 14:46:30 by user42           ###   ########.fr       */
+/*   Updated: 2021/12/01 16:09:31 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(int ac, char **av)
 	stack_a = NULL;
 	if (arg_check(ac, av) == ERROR)
 	{
-		write(1, "Error\n", 8);
+		write(1, "Error\n", 6);
 		return (ERROR);
 	}
 	if (is_arg_sorted(ac, av) == TRUE)
@@ -31,4 +31,5 @@ int main(int ac, char **av)
 	if (lst_size(stack_a) <= 5)
 		stack_a = sort_small_stack(stack_a);
 	free_stack(stack_a);
+	return (SUCCESS);
 }
