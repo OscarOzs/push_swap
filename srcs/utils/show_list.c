@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:19:35 by user42            #+#    #+#             */
-/*   Updated: 2021/11/30 16:25:25 by user42           ###   ########.fr       */
+/*   Updated: 2021/12/01 15:49:08 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	show_list(nbr_data	*lst)
 	while (tmp != NULL)
 	{
 		printf("nbr : %d\n", tmp->nbr);
-		printf("pos : %d\n", tmp->nbr_pos);
+		printf("pos : %lld\n", tmp->nbr_pos);
 		printf("\n");
 		tmp = tmp->next;
 	}
