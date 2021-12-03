@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:32:57 by user42            #+#    #+#             */
-/*   Updated: 2021/12/01 15:48:50 by user42           ###   ########.fr       */
+/*   Updated: 2021/12/03 15:09:16 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 typedef struct	node_number_data
 {
 	int						nbr;
-	unsigned long long		nbr_pos;
+	unsigned long			nbr_pos;
 	struct node_number_data	*next;
 }				nbr_data;
 
