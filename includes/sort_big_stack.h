@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   sort_big_stack.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 15:52:01 by user42            #+#    #+#             */
-/*   Updated: 2021/12/06 17:59:28 by user42           ###   ########.fr       */
+/*   Created: 2021/12/03 15:06:00 by user42            #+#    #+#             */
+/*   Updated: 2021/12/03 15:06:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef SORT_BIG_STACK_H
+# define SORT_BIG_STACK_H
 
+nbr_data	*sort_big_stack(nbr_data *stack_a);
 
-void	free_stack(nbr_data *stack)
-{
-	nbr_data	*tmp;
-
-	while (stack != NULL)
-	{
-		tmp = stack->next;
-		free(stack);
-		stack = tmp;
-	}
-}
+#endif
