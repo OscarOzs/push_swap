@@ -1,12 +1,12 @@
 # **************************************************************************** #
-#                                                                              #
+#                                                                             #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 15:14:12 by oozsertt          #+#    #+#              #
-#    Updated: 2021/12/17 14:35:36 by oozsertt         ###   ########.fr        #
+#    Updated: 2021/12/17 18:59:50 by oozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,15 @@ BUILD = .build
 
 vpath %.c $(foreach dir, $(SRCS_PATH), $(dir):)
 
-SRCS = 	$(foreach dir, $(SRCS_PATH), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
+SRCS = push_swap.c \
+arg_check.c int_overflow_and_is_digit.c is_arg_sorted.c is_duplicate.c number_of_arg.c \
+free_stack.c malloc_stack.c \
+pa.c pb.c ra.c rra.c sa.c \
+set_stack_a.c \
+sort_big_stack.c \
+sort_small_stack.c five_numbers_pb_one.c five_numbers_pb_zero.c sort_five_numbers.c \
+four_numbers_pb_zero.c sort_four_numbers.c sort_three_numbers.c sort_two_numbers.c \
+is_lst_sorted.c lst_size.c \
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.c=%.o))
 
