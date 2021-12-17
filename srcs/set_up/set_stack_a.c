@@ -6,16 +6,16 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:33:00 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:33:02 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:53:47 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	get_nbr(nbr_data *stack_a, char **arg)
+static void	get_nbr(t_nbr_data *stack_a, char **arg)
 {
 	int			i;
-	nbr_data	*tmp;
+	t_nbr_data	*tmp;
 
 	i = 1;
 	tmp = stack_a;
@@ -27,7 +27,7 @@ static void	get_nbr(nbr_data *stack_a, char **arg)
 	}
 }
 
-static void	swap_node_data(nbr_data *node1, nbr_data *node2)
+static void	swap_node_data(t_nbr_data *node1, t_nbr_data *node2)
 {
 	int	tmp;
 
@@ -36,10 +36,10 @@ static void	swap_node_data(nbr_data *node1, nbr_data *node2)
 	node2->nbr = tmp;
 }
 
-static nbr_data	*sort_stack(nbr_data *stack)
+static t_nbr_data	*sort_stack(t_nbr_data *stack)
 {
-	nbr_data	*stack_addr;
-	nbr_data	*tmp;
+	t_nbr_data	*stack_addr;
+	t_nbr_data	*tmp;
 	int			i;
 
 	stack_addr = stack;
@@ -60,10 +60,10 @@ static nbr_data	*sort_stack(nbr_data *stack)
 	return (stack);
 }
 
-nbr_data	*get_position(nbr_data *stack_a, nbr_data *stack_a_sorted)
+t_nbr_data	*get_position(t_nbr_data *stack_a, t_nbr_data *stack_a_sorted)
 {
-	nbr_data	*tmp;
-	nbr_data	*tmp2;
+	t_nbr_data	*tmp;
+	t_nbr_data	*tmp2;
 
 	tmp = stack_a;
 	while (tmp != NULL)
@@ -80,9 +80,9 @@ nbr_data	*get_position(nbr_data *stack_a, nbr_data *stack_a_sorted)
 	return (stack_a);
 }
 
-nbr_data	*set_stack_a(int size, char **arg, nbr_data *stack_a)
+t_nbr_data	*set_stack_a(int size, char **arg, t_nbr_data *stack_a)
 {
-	nbr_data	*stack_a_cpy;
+	t_nbr_data	*stack_a_cpy;
 
 	stack_a = malloc_stack(size, stack_a);
 	if (stack_a == NULL)

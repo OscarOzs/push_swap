@@ -6,16 +6,16 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:32:42 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:32:43 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:49:19 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-nbr_data	*rra(nbr_data *stack_a)
+t_nbr_data	*rra(t_nbr_data *stack_a)
 {
-	nbr_data	*last_node;
-	nbr_data	*before_last_node;
+	t_nbr_data	*last_node;
+	t_nbr_data	*before_last_node;
 
 	if (lst_size(stack_a) < 2)
 		return (stack_a);

@@ -6,15 +6,15 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:32:52 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:32:54 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:49:23 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-nbr_data	*sa(nbr_data *stack_a)
+t_nbr_data	*sa(t_nbr_data *stack_a)
 {
-	nbr_data	*tmp;
+	t_nbr_data	*tmp;
 
 	if (lst_size(stack_a) < 2)
 		return (stack_a);

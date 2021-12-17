@@ -6,13 +6,13 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:33:31 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:33:33 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:54:36 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static nbr_data	*last_is_top(nbr_data *stack_a)
+static t_nbr_data	*last_is_top(t_nbr_data *stack_a)
 {
 	if (stack_a->next->nbr_pos == 3)
 	{
@@ -24,7 +24,7 @@ static nbr_data	*last_is_top(nbr_data *stack_a)
 	return (stack_a);
 }
 
-static nbr_data	*middle_is_top(nbr_data *stack_a)
+static t_nbr_data	*middle_is_top(t_nbr_data *stack_a)
 {
 	if (stack_a->next->nbr_pos == 2)
 		stack_a = sa(stack_a);
@@ -33,14 +33,14 @@ static nbr_data	*middle_is_top(nbr_data *stack_a)
 	return (stack_a);
 }
 
-static nbr_data	*first_is_top(nbr_data *stack_a)
+static t_nbr_data	*first_is_top(t_nbr_data *stack_a)
 {
 	stack_a = rra(stack_a);
 	stack_a = sa(stack_a);
 	return (stack_a);
 }
 
-static nbr_data	*sort_three_numbers_left(nbr_data *stack_a)
+static t_nbr_data	*sort_three_numbers_left(t_nbr_data *stack_a)
 {
 	if (stack_a->nbr_pos == 4)
 		stack_a = last_is_top(stack_a);
@@ -51,9 +51,9 @@ static nbr_data	*sort_three_numbers_left(nbr_data *stack_a)
 	return (stack_a);
 }
 
-nbr_data	*sort_five_numbers(nbr_data *stack_a)
+t_nbr_data	*sort_five_numbers(t_nbr_data *stack_a)
 {
-	nbr_data	*stack_b;
+	t_nbr_data	*stack_b;
 
 	stack_b = NULL;
 	stack_a = five_numbers_pb_zero(stack_a, &stack_b);

@@ -6,19 +6,19 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:33:15 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:33:17 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:49:49 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static nbr_data	*one_is_first(nbr_data *stack_a, nbr_data **stack_b)
+static t_nbr_data	*one_is_first(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
 	stack_a = pb(stack_a, stack_b);
 	return (stack_a);
 }
 
-static nbr_data	*one_is_second(nbr_data *stack_a, nbr_data **stack_b)
+static t_nbr_data	*one_is_second(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
 	stack_a = ra(stack_a);
 	if (is_lst_sorted(stack_a) == TRUE)
@@ -27,7 +27,7 @@ static nbr_data	*one_is_second(nbr_data *stack_a, nbr_data **stack_b)
 	return (stack_a);
 }
 
-static nbr_data	*one_is_third(nbr_data *stack_a, nbr_data **stack_b)
+static t_nbr_data	*one_is_third(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
 	stack_a = ra(stack_a);
 	stack_a = ra(stack_a);
@@ -37,7 +37,7 @@ static nbr_data	*one_is_third(nbr_data *stack_a, nbr_data **stack_b)
 	return (stack_a);
 }
 
-static nbr_data	*one_is_last(nbr_data *stack_a, nbr_data **stack_b)
+static t_nbr_data	*one_is_last(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
 	stack_a = rra(stack_a);
 	if (is_lst_sorted(stack_a) == TRUE)
@@ -46,7 +46,7 @@ static nbr_data	*one_is_last(nbr_data *stack_a, nbr_data **stack_b)
 	return (stack_a);
 }
 
-nbr_data	*five_numbers_pb_one(nbr_data *stack_a, nbr_data **stack_b)
+t_nbr_data	*five_numbers_pb_one(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
 	if (stack_a->nbr_pos == 1)
 		stack_a = one_is_first(stack_a, stack_b);

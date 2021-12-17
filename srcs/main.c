@@ -6,16 +6,16 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:51:25 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:35:24 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:56:39 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	nbr_data	*stack_a;
+	t_nbr_data	*stack_a;
 
 	stack_a = NULL;
 	if (arg_check(ac, av) == ERROR)

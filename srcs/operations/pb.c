@@ -6,15 +6,15 @@
 /*   By: oozsertt <oozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 14:32:29 by oozsertt          #+#    #+#             */
-/*   Updated: 2021/12/17 14:32:30 by oozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:49:10 by oozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-nbr_data	*pb(nbr_data *stack_a, nbr_data **stack_b)
+t_nbr_data	*pb(t_nbr_data *stack_a, t_nbr_data **stack_b)
 {
-	nbr_data	*tmp;
+	t_nbr_data	*tmp;
 
 	if (stack_a == NULL)
 		return (stack_a);
