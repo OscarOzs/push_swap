@@ -19,5 +19,7 @@ Within the sorting process we should work the logic arround some operations dete
 # Using :
 
 $ ./push_swap 3 4 8 9 7 5 1 0 2 6
+
 or
+
 $ ./push_swap "10 30 60 42 80 99 -42"
